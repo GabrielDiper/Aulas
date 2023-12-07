@@ -1,0 +1,33 @@
+#Classe Abstrata e Interface POO
+
+# quantidade variavel de notas (p1,p2,pn)
+ 
+from abc import ABC, abstractmethod
+ 
+class media(ABC):
+
+   notas = []
+
+   @abstractmethod
+
+   def calcula(self):
+
+      pass
+
+class mediaBimestre(media):
+
+   def __init__(self, notas):
+
+      self.notas = notas
+
+   def calcula(self):
+
+      calc = sum(self.notas)/len(self.notas)
+
+      return(calc)
+ 
+notas = [7, 2, 5 , 10, 0]
+
+obj1 = mediaBimestre(notas)
+
+print("deu:",obj1.calcula(),";")
