@@ -1,0 +1,20 @@
+#Classe Abstrata e Interface POO
+ 
+from abc import ABC, abstractmethod
+ 
+class media(ABC):
+   notas = []
+   @abstractmethod
+   def calcula(self):
+      pass
+class mediaBimestre(media):
+   def __init__(self, notas):
+      self.notas = notas
+   def calcula(self):
+      calc = (p1 + p2) / 2
+      return(calc)
+ 
+p1 = 7
+p2 = 2
+obj1 = mediaBimestre([p1, p2])
+print(obj1.calcula())
